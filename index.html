@@ -1,60 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+
   <title>Frontend Mentor | Intro component with sign up form</title>
 
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Outfit&display=swap');
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-    body{ font-family: 'Outfit', sans-serif; font-size: 16px; color: white; background-image: url(./images/bg-intro-desktop.png); background-color: hsl(0, 100%, 74%);}
-    .flex{ padding: 50px; display:flex; justify-content: center; align-items: center;}
-    .text{ width: 375px; padding: 50px;}
-    section{cursor: pointer; box-shadow:0px 10px 10px black; background-color: hsl(248, 32%, 49%); border-radius: 10px; text-align: center; padding: 20px;  color: white;}
-    .form{ border-radius: 15px; padding: 20px; display:grid; background-color: white; color: black;}
-    input{font-family: 'Outfit', sans-serif; border-radius: 5px; padding: 15px;}
-    button{cursor:pointer; font-family: 'Outfit', sans-serif; color:white; border-radius: 5px; padding: 20px; background-color: hsl(154, 59%, 51%);}
 
-    @media only screen and (max-width: 700px){
-      .flex{ padding: 50px; display:inline-block; justify-content: center; align-items: center;}
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+
+    body {
+      font-family: 'Outfit', sans-serif;
+      font-size: 16px;
+      color: white;
+      background-image: url(./images/bg-intro-desktop.png);
+      background-color: hsl(0, 100%, 74%);
+    }
+
+    .flex {
+      padding: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .text {
+      width: 375px;
+      padding: 50px;
+    }
+
+    section {
+      cursor: pointer;
+      box-shadow: 0px 10px 10px black;
+      background-color: hsl(248, 32%, 49%);
+      border-radius: 10px;
+      text-align: center;
+      padding: 20px;
+      color: white;
+    }
+
+    .form {
+      border-radius: 15px;
+      padding: 20px;
+      display: grid;
+      background-color: white;
+      color: black;
+    }
+
+    input {
+      font-family: 'Outfit', sans-serif;
+      border-radius: 5px;
+      padding: 15px;
+    }
+
+    button {
+      cursor: pointer;
+      font-family: 'Outfit', sans-serif;
+      color: white;
+      border-radius: 5px;
+      padding: 20px;
+      background-color: hsl(154, 59%, 51%);
+    }
+
+    @media only screen and (max-width: 700px) {
+      .flex {
+        padding: 50px;
+        display: inline-block;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+
+    button {
+      box-shadow: 3px 3px 5px 6px #ccc;
     }
   </style>
 </head>
+
 <body>
-<div class="flex">
-  <div class="text">
-  <h1>Learn to code by watching others</h1>
+  <div class="flex">
+    <div class="text">
+      <h1>Learn to code by watching others</h1>
 
-  <p>See how experienced developers solve problems in real-time. Watching scripted tutorials is great, 
-  but understanding how developers think is invaluable.</p>
-</div>
-<div class="signup">
-  <section>
-    <b>Try it free 7 days</b> then $20/mo. thereafter
-</section>
-<br><br>
-<form class="form">
-  <input type="text" placeholder="First Name"><br>
-  <input type="text" placeholder="Last Name"><br>
-  <input type="text" placeholder="Email Address"><br>
-  <input type="text" placeholder="Password"><br>
+      <p>See how experienced developers solve problems in real-time. Watching scripted tutorials is great,
+        but understanding how developers think is invaluable.</p>
+    </div>
+    <div class="signup">
+      <section>
+        <b>Try it free 7 days</b> then $20/mo. thereafter
+      </section>
+      <br><br>
+      <form class="form">
+        <input type="text" placeholder="First Name"><br>
+        <input type="text" placeholder="Last Name"><br>
+        <input type="text" placeholder="Email Address"><br>
+        <input type="text" placeholder="Password"><br>
 
-  <button>Claim your free trial</button><br>
+        <button>Claim your free trial</button><br>
 
-  <p>By clicking the button, you are agreeing to our <span style="color: red; cursor: pointer;">Terms and Services</span></p>
-</form>
-</div>
-</div>
+        <p>By clicking the button, you are agreeing to our <span style="color: red; cursor: pointer;">Terms and
+            Services</span></p>
+      </form>
+    </div>
+  </div>
   <footer style="padding: 60px;">
     <p class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
       Coded by <a href="https://www.kshitizupreti.com.np" target="_blank">XiTiZ</a>.
     </p>
   </footer>
 </body>
+
 </html>
