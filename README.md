@@ -36,30 +36,35 @@ Users should be able to:
 
 ### Links
 
-- Live Site Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Live Site Solution URL: [https://xitizupreti.github.io/intro-component-with-signup-form-master/](https://xitizupreti.github.io/intro-component-with-signup-form-master/)
 
 ## My process
+As usual 1st HTML Model then added CSS properties and finally used JS.
 
 ### Built with
 
 - Semantic HTML5 markup
 - CSS custom properties
+- JavaScript
 - Flexbox
-- CSS Grid
 - Mobile-first workflow
 
 ### Continued development
 
+```box-shadow: none|h-offset v-offset blur spread color |inset|initial|inherit;```
+``` ::placeholder{} => To change placeholder color ```
+``` as an advantage with filter:drop-shadow you can generate shadow around irregular shapes or images, whereas box-shadows generates a rectangular shadow. ```
+
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
+- [Section Vs Div](https://www.geeksforgeeks.org/what-is-the-difference-between-section-and-div-tags-in-html/) - This helped me for understanding their difference. I really liked this pattern and will use it going forward.
+- [CSS Outline](https://www.w3schools.com/css/css_outline.asp) - This is an amazing article which helped me finally understand CSS Outline. I'd recommend it to anyone still learning this concept.
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
+- Website - [XiTiZ](https://www.kshitizupreti.com.np)
 
 
 ## Acknowledgments
 
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
+I am thankful to Google, Stack OverFlow & [Aashish.](https://github.com/aashish-cd)

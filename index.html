@@ -1,64 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- displays site properly based on user's device -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <title>Frontend Mentor | Intro component with sign up form</title>
 
-  <title>Frontend Mentor | Intro component with sign up form</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Outfit&display=swap");
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+      body {
+        font-family: "Outfit", sans-serif;
+        font-size: 16px;
+        color: white;
+        background-image: url(./images/bg-intro-desktop.png);
+        background-color: hsl(0, 100%, 74%);
+      }
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .flex {
+        padding: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .text {
+        width: 375px;
+        padding: 50px;
+      }
+      section {
+        /* font-weight:normal; */
+        cursor: pointer;
+        box-shadow: 0px 8px 5px rgba(0, 0, 0, 0.5);;
+        background-color: hsl(248, 32%, 49%);
+        border-radius: 10px;
+        letter-spacing: 2px;
+        text-align: center;
+        padding: 20px;
+        color: white;
+      }
+      .form {
+        border-radius: 15px;
+        padding: 20px;
+        display: grid;
+        background-color: white;
+        color: black;
+      }
+      input {
+        font-family: "Outfit", sans-serif;
+        border-radius: 5px;
+        padding: 15px;
+        outline:none;
+      }
+      ::placeholder{color:hsl(246, 25%, 77%); font-weight: bold;}
+      button {
+        font-weight: 600;
+        letter-spacing: 1px;
+        cursor: pointer;
+        font-family: "Outfit", sans-serif;
+        color: white;
+        border-radius: 5px;
+        padding: 20px;
+        background-color: hsl(154, 59%, 51%);
+        box-shadow: 0px 5px 1px hsl(154, 59%, 51%);
+      /* box-shadow: 3px 3px 5px 6px #ccc; */
+      /* filter: drop-shadow(10px 10px 4px #ccc); */
+      /* filter:drop-shadow(offset-x offset-y blur-radius color) */
+      }
 
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Outfit&display=swap');
-    .attribution a { color: hsl(228, 45%, 44%); }
-    body{ font-family: 'Outfit', sans-serif; font-size: 16px; color: white; background-image: url(./images/bg-intro-desktop.png); background-color: hsl(0, 100%, 74%);}
-    .attribution { font-size: 11px; text-align: center; }
-    .flex{ padding: 50px; display:flex; justify-content: center; align-items: center;}
-    .text{ width: 375px; padding: 50px;}
-    section{cursor: pointer; box-shadow:0px 10px 10px black; background-color: hsl(248, 32%, 49%); border-radius: 10px; text-align: center; padding: 20px;  color: white;}
-    .form{ border-radius: 15px; padding: 20px; display:grid; background-color: white; color: black;}
-    input{font-family: 'Outfit', sans-serif; border-radius: 5px; padding: 15px;}
-    button{cursor: pointer; font-family: 'Outfit', sans-serif; color:white; border-radius: 5px; padding: 20px; background-color: hsl(154, 59%, 51%);}
+      @media only screen and (max-width: 700px) {
+        .flex {
+          padding: 50px;
+          display: inline-block;
+          justify-content: center;
+          align-items: center;
+        }
+      }
+    </style>
+  </head>
 
-    @media only screen and (max-width: 700px){
-      .flex{ padding: 50px; display:inline-block; justify-content: center; align-items: center;}
-    }
-  </style>
-</head>
+  <body>
+    <div class="flex">
+      <div class="text">
+        <h1>Learn to code by watching others</h1>
 
-<body>
-<div class="flex">
-  <div class="text">
-  <h1>Learn to code by watching others</h1>
+        <p>
+          See how experienced developers solve problems in real-time. Watching
+          scripted tutorials is great, but understanding how developers think is
+          invaluable.
+        </p>
+      </div>
+      <div class="signup">
+        <section><b>Try it free 7 days</b> then <br> $20/mo. thereafter</section>
+        <br /><br />
+        <form class="form">
+          <input type="text" placeholder="First Name" /><br />
+          <input type="text" placeholder="Last Name" /><br />
+          <input type="text" placeholder="Email Address" /><br />
+          <input type="text" placeholder="Password" /><br />
 
-  <p>See how experienced developers solve problems in real-time. Watching scripted tutorials is great, 
-  but understanding how developers think is invaluable.</p>
-</div>
-<div class="signup">
-  <section>
-    <b>Try it free 7 days</b> then $20/mo. thereafter
-</section>
-<br><br>
-<form class="form">
-  <input type="text" placeholder="First Name"><br>
-  <input type="text" placeholder="Last Name"><br>
-  <input type="text" placeholder="Email Address"><br>
-  <input type="text" placeholder="Password"><br>
+          <button>CLAIM YOUR FREE TRIAL</button><br />
 
-  <button>Claim your free trial</button><br>
-
-  <p>By clicking the button, you are agreeing to our <span style="color: red; cursor: pointer;">Terms and Services</span></p>
-</form>
-</div>
-</div>
-  <footer style="padding: 60px;">
-    <p class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-      Coded by <a href="https://www.kshitizupreti.com.np" target="_blank">XiTiZ</a>.
-    </p>
-  </footer>
-</body>
-
+          <p style="color: hsl(246, 25%, 77%)">
+            By clicking the button, you are agreeing to our
+            <span style="color: red; cursor: pointer">Terms and Services</span>
+          </p>
+        </form>
+      </div>
+    </div>
+    <footer style="padding: 60px">
+      <p class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by
+        <a href="https://www.kshitizupreti.com.np" target="_blank">XiTiZ</a>.
+      </p>
+    </footer>
+  </body>
 </html>
