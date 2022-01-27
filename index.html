@@ -13,14 +13,16 @@
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Outfit&display=swap');
     .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-    body{ font-family: 'Outfit', sans-serif; font-size: 16px; color: white; background-image: url(./images/bg-intro-desktop.png); background-color: hsl(0, 100%, 74%);}
-    .flex{ padding: 60px; display:flex; justify-content: center; align-items: center;}
-    .text{ width: 375px; padding: 70px;}
-    section{ box-shadow:0px 10px 10px black; background-color: hsl(248, 32%, 49%); border-radius: 10px; text-align: center; padding: 20px;  color: white;}
+    .flex{ padding: 50px; display:flex; justify-content: center; align-items: center;}
+    .text{ width: 375px; padding: 50px;}
+    section{cursor: pointer; box-shadow:0px 10px 10px black; background-color: hsl(248, 32%, 49%); border-radius: 10px; text-align: center; padding: 20px;  color: white;}
     .form{ border-radius: 15px; padding: 20px; display:grid; background-color: white; color: black;}
     input{font-family: 'Outfit', sans-serif; border-radius: 5px; padding: 15px;}
-    button{font-family: 'Outfit', sans-serif; color:white; border-radius: 5px; padding: 20px; background-color: hsl(154, 59%, 51%);}
+    button{cursor: pointer; font-family: 'Outfit', sans-serif; color:white; border-radius: 5px; padding: 20px; background-color: hsl(154, 59%, 51%);}
+
+    @media only screen and (max-width: 700px){
+      .flex{ padding: 50px; display:inline-block; justify-content: center; align-items: center;}
+    }
   </style>
 </head>
 
@@ -45,7 +47,7 @@
 
   <button>Claim your free trial</button><br>
 
-  <p>By clicking the button, you are agreeing to our <span style="color: red;">Terms and Services</span></p>
+  <p>By clicking the button, you are agreeing to our <span style="color: red; cursor: pointer;">Terms and Services</span></p>
 </form>
 </div>
 </div>
