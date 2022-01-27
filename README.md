@@ -32,7 +32,7 @@ Users should be able to:
 
 ![Mobile SS](./design/mobile-design.jpg)
 ![Desktop SS](./design/desktop-design.jpg)
-[Active states](design\active-states.jpg)
+![Active states](./design/active-states.jpg)
 
 ### Links
 
@@ -51,8 +51,8 @@ As usual 1st HTML Model then added CSS properties and finally used JS.
 
 ### Continued development
 
-```box-shadow: none|h-offset v-offset blur spread color |inset|initial|inherit;```
-``` ::placeholder{} => To change placeholder color ```
+```box-shadow: none|h-offset v-offset blur spread color |inset|initial|inherit;```<br>
+``` ::placeholder{} => To change placeholder color ```<br>
 ``` as an advantage with filter:drop-shadow you can generate shadow around irregular shapes or images, whereas box-shadows generates a rectangular shadow. ```
 
 ### Useful resources
