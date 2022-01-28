@@ -107,15 +107,19 @@
           invaluable.
         </p>
       </div>
-      <div class="signup">
+      <div>
         <section><b>Try it free 7 days</b> then <br> $20/mo. thereafter</section>
         <br /><br />
         <form class="form" name="myform">
-          <input type="text" id="fname" name="fname" placeholder="First Name"/><br />
-          <input type="text" id="lname" name="lname" placeholder="Last Name" /><br />
-          <input type="text" id="mail" name="mail" placeholder="Email Address" /><br />
-          <input type="text" id="password" name="password" placeholder="Password" /><br />
-          <input id="submit" onclick="empty()" type="submit" value="CLAIM YOUR FREE TRIAL" /><br />
+          <input type="text" id="fname" name="fname" placeholder="First Name"/>
+          <p id="f" style="color: red; font-size: small; padding-left: 60%; display: none;"><i>First Name cannot be empty</i></p><br />
+          <input type="text" id="lname" name="lname" placeholder="Last Name" />
+                    <p id="l" style="color: red; font-size: small; padding-left: 60%; display: none;"><i>Last Name cannot be empty</i></p><br />
+          <input type="text" id="mail" name="mail" placeholder="Email Address" />
+                    <p id="m" style="color: red; font-size: small; padding-left: 60%; display: none;"><i>Looks like this is not an email</i></p><br />
+          <input type="text" id="password" name="password" placeholder="Password" />
+                    <p id="p" style="color: red; font-size: small; padding-left: 60%; display: none;"><i>Password cannot be empty</i></p><br />
+          <input id="submit" onclick="empty()" type="button" value="CLAIM YOUR FREE TRIAL" /><br />
 
           <p style="color: hsl(246, 25%, 77%)">
             By clicking the button, you are agreeing to our
