@@ -1,27 +1,31 @@
 
-
 function empty(){
-var fname=document.myform.fname.value; 
-var lname=document.myform.lname.value;
-var mail=document.myform.mail.value;   
-var password=document.myform.password.value; 
+const fname=document.myform.fname.value; 
+const lname=document.myform.lname.value;
+const mail=document.myform.mail.value;   
+const password=document.myform.password.value;
 
-const border = () =>{
-    input.forEach((field)=>{
-        field.style.border ="2px solid hsl(0, 100%, 74%)";
-    }
-)};
+const styles={
+    "border":"2px solid hsl(0, 100%, 74%)",
+    "background-image":"url(./images/icon-error.svg)",
+    "background-repeat":"no-repeat",
+    "background-position":"95% 50%"
+}
 
     if (fname=="" || fname==null){
-       border();
+      const f=document.getElementById('fname');
+      Object.assign(f.style,styles);
     }
     if(lname==null || lname==""){
-        border();
+        const l=document.getElementById('lname');
+        Object.assign(l.style,styles);
     }
     if(mail=="" || mail==null){
-        border();
+        const m=document.getElementById('mail');
+        Object.assign(m.style,styles);
     }
     if(password=="" || password==null){
-        border();
+        const p=document.getElementById('password');
+      Object.assign(p.style,styles);
     }
 }

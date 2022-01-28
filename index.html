@@ -4,26 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- displays site properly based on user's device -->
-    <script>
-function empty(){
-var fname=document.myform.fname.value; 
-var lname=document.myform.lname.value;
-var mail=document.myform.mail.value;   
-var password=document.myform.password.value; 
-
-    if (fname=="" || fname==null){
-       border();
-    }
-    if(lname==null || lname==""){
-        border();
-    }
-    if(mail=="" || mail==null){
-        border();
-    }
-    if(password=="" || password==null){
-        border();
-    }
-}
+    <script src="./images/js.js">
     </script>
 
     <link
@@ -130,10 +111,10 @@ var password=document.myform.password.value;
         <section><b>Try it free 7 days</b> then <br> $20/mo. thereafter</section>
         <br /><br />
         <form class="form" name="myform">
-          <input type="text" id="fname" name="fname" placeholder="First Name" style="border: 2px solid hsl(0, 100%, 74%); background-image: url(./images/icon-error.svg); background-repeat: no-repeat; background-position: 95% 50%;"/><br />
-          <input type="text" id="lname" name="lname" placeholder="Last Name" style="border: 2px solid hsl(0, 100%, 74%); background-image: url(./images/icon-error.svg); background-repeat: no-repeat; background-position: 95% 50%;" /><br />
-          <input type="text" id="mail" name="mail" placeholder="Email Address" style="border: 2px solid hsl(0, 100%, 74%); background-image: url(./images/icon-error.svg); background-repeat: no-repeat; background-position: 95% 50%;" /><br />
-          <input type="text" id="password" name="password" placeholder="Password" style="border: 2px solid hsl(0, 100%, 74%); background-image: url(./images/icon-error.svg); background-repeat: no-repeat; background-position: 95% 50%;" /><br />
+          <input type="text" id="fname" name="fname" placeholder="First Name"/><br />
+          <input type="text" id="lname" name="lname" placeholder="Last Name" /><br />
+          <input type="text" id="mail" name="mail" placeholder="Email Address" /><br />
+          <input type="text" id="password" name="password" placeholder="Password" /><br />
           <input id="submit" onclick="empty()" type="submit" value="CLAIM YOUR FREE TRIAL" /><br />
 
           <p style="color: hsl(246, 25%, 77%)">
