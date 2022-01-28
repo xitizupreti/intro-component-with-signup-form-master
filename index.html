@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- displays site properly based on user's device -->
+    <script src="images/js.js"></script>
 
     <link
       rel="icon"
@@ -63,9 +64,12 @@
         border-radius: 5px;
         padding: 15px;
         outline:none;
+        border-color:hsl(246, 25%, 77%);
+        border-style: solid;
+        border-width: 2px;
       }
       ::placeholder{color:hsl(246, 25%, 77%); font-weight: bold;}
-      button {
+      #submit {
         font-weight: 600;
         letter-spacing: 1px;
         cursor: pointer;
@@ -105,13 +109,12 @@
       <div class="signup">
         <section><b>Try it free 7 days</b> then <br> $20/mo. thereafter</section>
         <br /><br />
-        <form class="form">
-          <input type="text" placeholder="First Name" /><br />
-          <input type="text" placeholder="Last Name" /><br />
-          <input type="text" placeholder="Email Address" /><br />
-          <input type="text" placeholder="Password" /><br />
-
-          <button>CLAIM YOUR FREE TRIAL</button><br />
+        <form class="form" name="myform">
+          <input type="text" id="fname" name="fname" placeholder="First Name" /><br />
+          <input type="text" id="lname" name="lname" placeholder="Last Name" /><br />
+          <input type="text" id="mail" name="mail" placeholder="Email Address" /><br />
+          <input type="text" id="password" name="password" placeholder="Password" /><br />
+          <input id="submit" onclick="empty()" type="submit" value="CLAIM YOUR FREE TRIAL" /><br />
 
           <p style="color: hsl(246, 25%, 77%)">
             By clicking the button, you are agreeing to our

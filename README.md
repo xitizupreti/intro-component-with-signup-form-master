@@ -51,8 +51,8 @@ As usual 1st HTML Model then added CSS properties and finally used JS.
 
 ### Continued development
 
-```box-shadow: none|h-offset v-offset blur spread color |inset|initial|inherit;```<br>
-``` ::placeholder{} => To change placeholder color ```<br>
+```box-shadow: none|h-offset v-offset blur spread color |inset|initial|inherit;```<br><br>
+``` ::placeholder{} => To change placeholder color ```<br><br>
 ``` as an advantage with filter:drop-shadow you can generate shadow around irregular shapes or images, whereas box-shadows generates a rectangular shadow. ```
 
 ### Useful resources
