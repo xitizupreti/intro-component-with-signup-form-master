@@ -53,12 +53,16 @@ As usual 1st HTML Model then added CSS properties and finally used JS.
 
 ```box-shadow: none|h-offset v-offset blur spread color |inset|initial|inherit;```<br><br>
 ``` ::placeholder{} => To change placeholder color ```<br><br>
-``` as an advantage with filter:drop-shadow you can generate shadow around irregular shapes or images, whereas box-shadows generates a rectangular shadow. ```
+``` as an advantage with filter:drop-shadow you can generate shadow around irregular shapes or images, whereas box-shadows generates a rectangular shadow. ```<br><br>
+```display:block/none (useful while toggle)```
 
 ### Useful resources
 
 - [Section Vs Div](https://www.geeksforgeeks.org/what-is-the-difference-between-section-and-div-tags-in-html/) - This helped me for understanding their difference. I really liked this pattern and will use it going forward.
 - [CSS Outline](https://www.w3schools.com/css/css_outline.asp) - This is an amazing article which helped me finally understand CSS Outline. I'd recommend it to anyone still learning this concept.
+- [Pattern in Input field](https://www.w3schools.com/tags/att_input_pattern.asp) - To be honest, I didn't know about this attribute till working on this project.
+- [JavaScript RegExp test()](https://www.w3schools.com/jsref/jsref_regexp_test.asp) - This article helped me understand about pattern test in email input fields.
+- [JavaScript Object.assign()](https://www.programiz.com/javascript/library/object/assign) - This was very important for me to create style in one variable and use it anywhere.
 
 ## Author
 
