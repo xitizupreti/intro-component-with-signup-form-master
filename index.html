@@ -57,16 +57,13 @@
         padding: 20px;
         display: grid;
         background-color: white;
-        color: black;
       }
       input {
         font-family: "Outfit", sans-serif;
         border-radius: 5px;
         padding: 15px;
         outline: none;
-        border-color: hsl(246, 25%, 77%);
-        border-style: solid;
-        border-width: 2px;
+        border:3px solid hsl(246, 25%, 77%);
       }
       ::placeholder {
         color: hsl(246, 25%, 77%);
@@ -147,6 +144,7 @@
             id="mail"
             name="mail"
             placeholder="Email Address"
+            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
           />
           <p
             id="m"

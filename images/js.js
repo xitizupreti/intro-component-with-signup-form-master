@@ -4,15 +4,36 @@ function empty() {
   const mail = document.myform.mail.value;
   const password = document.myform.password.value;
 
+  function ValidateEmail(mail) 
+{
+ if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(myform.mail.value))
+  {
+    const m = document.getElementById("mail");
+    Object.assign(m.style, normalStyle);
+    var t = document.getElementById("m");
+    t.style.display = "none";
+  }
+  else{
+    const m = document.getElementById("mail");
+    Object.assign(m.style, styles);
+    m.placeholder = "";
+    var t = document.getElementById("m");
+    t.style.display = "block";
+    t.style.color="red";
+  }
+}
+
   const styles = {
-    border: "3px solid hsl(0, 100%, 74%)",
+    "border": "3px solid hsl(0, 100%, 74%)",
     "background-image": "url(./images/icon-error.svg)",
     "background-repeat": "no-repeat",
     "background-position": "95% 50%",
+    "color":"red"
   };
   const normalStyle = {
-    border: "2px solid hsl(246, 25%, 77%)",
+    "border": "3px solid hsl(246, 25%, 77%)",
     "background-image": "none",
+    "color":"black"
   };
   // const allInput = document.getElementsByTagName('input');
   //   for (var i = 0; i < allInput.length; i++) {
@@ -54,10 +75,7 @@ function empty() {
     var t = document.getElementById("m");
     t.style.display = "block";
   } else {
-    const m = document.getElementById("mail");
-    Object.assign(m.style, normalStyle);
-    var t = document.getElementById("m");
-    t.style.display = "none";
+    ValidateEmail();
   }
   if (password == "" || password == null) {
     const p = document.getElementById("password");
