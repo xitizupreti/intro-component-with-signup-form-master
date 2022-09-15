@@ -16,7 +16,7 @@ This is a solution to the [Intro component with sign up form challenge on Fronte
 - [Acknowledgments](#acknowledgments)
 
 ## Overview
-Just a simple QR Sign UP form with the help of HTML5, CSS3 & JavaScript.
+Just a simple Sign UP form with the help of HTML5, CSS3 & JavaScript.
 
 ### The challenge
 
