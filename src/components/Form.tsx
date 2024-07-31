@@ -3,40 +3,23 @@ import { useState, ChangeEvent, FormEvent } from 'react';
 import styles from './Form.module.css';
 
 export default function Form() {
-  const [fname, setFname] = useState<string>('');
-  const [lname, setLname] = useState<string>('');
-  const [mail, setMail] = useState<string>('');
-  const [password, setPassword] = useState<string>('');
+  const [data, setData] = useState({
+    fname: '',
+    lname: '',
+    mail: '',
+    password: '',
+  });
 
   const [fnameError, setFnameError] = useState<string>('');
   const [lnameError, setLnameError] = useState<string>('');
   const [mailError, setMailError] = useState<string>('');
   const [passwordError, setPasswordError] = useState<string>('');
 
-  const errorStyles = {
-    border: '1px solid rgba(234, 56, 31,1)',
-    backgroundImage: 'url(/images/icon-error.svg)',
-    backgroundRepeat: 'no-repeat',
-    backgroundPosition: '95% 50%',
-  };
-
-  const normalStyles = {
-    border: '3px solid hsl(246, 25%, 77%)',
-    backgroundImage: 'none',
-    color: 'black',
-  };
-
-  const handleFnameInput = (event: ChangeEvent<HTMLInputElement>) => {
-    setFname(event.target.value);
-  };
-  const handleLnameInput = (event: ChangeEvent<HTMLInputElement>) => {
-    setLname(event.target.value);
-  };
-  const handleMailInput = (event: ChangeEvent<HTMLInputElement>) => {
-    setMail(event.target.value);
-  };
-  const handlePasswordInput = (event: ChangeEvent<HTMLInputElement>) => {
-    setPassword(event.target.value);
+  const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
+    setData((prev) => ({
+      ...prev,
+      [e.target.name]: e.target.value,
+    }));
   };
 
   const validateEmail = (email: string) => {
@@ -45,71 +28,71 @@ export default function Form() {
   };
   const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    if (!mail) {
+
+    if (!data.mail) {
       setMailError('Email cannot be empty');
-    } else if (!validateEmail(mail)) {
+    } else if (!validateEmail(data.mail)) {
       setMailError('Email address is not valid');
     } else {
       setMailError('');
-      console.log('Email is valid:', mail);
     }
 
-    if (!fname || fname == '') {
+    if (!data.fname || data.fname == '') {
       setFnameError('First Name cannot be empty');
+    } else {
+      setFnameError('');
     }
 
-    if (!lname || lname == '') {
+    if (!data.lname || data.lname == '') {
       setLnameError('Last Name cannot be empty');
+    } else {
+      setLnameError('');
     }
-    if (!password || password == '') {
+    if (!data.password || data.password == '') {
       setPasswordError('Password cannot be empty');
+    } else {
+      setPasswordError('');
     }
+  };
+  const errorStyles = {
+    border: '1px solid rgba(234, 56, 31,1)',
+    backgroundImage: 'url(/images/icon-error.svg)',
+    backgroundRepeat: 'no-repeat',
+    backgroundPosition: '95% 50%',
+    color: 'red',
+  };
+
+  const normalStyles = {
+    border: '3px solid hsl(246, 25%, 77%)',
+    backgroundImage: 'none',
   };
   return (
     <form className={styles.form} onSubmit={handleSubmit} name='myform'>
       <input
-        value={fname}
-        onChange={handleFnameInput}
+        value={data.fname}
+        onChange={handleChange}
         className={styles.input}
         style={fnameError ? errorStyles : normalStyles}
         type='text'
         name='fname'
         placeholder='First Name'
       />
-      <p
-        style={{
-          color: 'red',
-          fontSize: 'small',
-          paddingLeft: '60%',
-          display: 'none',
-        }}
-      >
-        <i>First Name cannot be empty</i>
-      </p>
+      <span style={{ color: 'black' }}>{fnameError}</span>
       <br />
       <input
-        value={lname}
-        onChange={handleLnameInput}
+        value={data.lname}
+        onChange={handleChange}
         className={styles.input}
         style={lnameError ? errorStyles : normalStyles}
         type='text'
         name='lname'
         placeholder='Last Name'
       />
-      <p
-        style={{
-          color: 'red',
-          fontSize: 'small',
-          paddingLeft: '60%',
-          display: 'none',
-        }}
-      >
-        <i>Last Name cannot be empty</i>
-      </p>
+      {lnameError}
       <br />
       <input
-        value={mail}
-        onChange={handleMailInput}
+        value={data.mail}
+        onChange={handleChange}
         className={styles.input}
         style={mailError ? errorStyles : normalStyles}
         type='email'
@@ -117,42 +100,22 @@ export default function Form() {
         placeholder='Email Address'
         pattern='[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$'
       />
-      <p
-        style={{
-          color: 'red',
-          fontSize: 'small',
-          paddingLeft: '60%',
-          display: 'none',
-        }}
-      >
-        <i>Looks like this is not an email</i>
-      </p>
+      {mailError}
       <br />
       <input
-        value={password}
-        onChange={handlePasswordInput}
+        value={data.password}
+        onChange={handleChange}
         className={styles.input}
         style={passwordError ? errorStyles : normalStyles}
         type='password'
         name='password'
         placeholder='Password'
       />
-      <p
-        style={{
-          color: 'red',
-          fontSize: 'small',
-          paddingLeft: '60%',
-          display: 'none',
-        }}
-      >
-        <i>Password cannot be empty</i>
-      </p>
+      {passwordError}
       <br />
-      <input
-        className={`${styles.submit} ${styles.input}`}
-        type='button'
-        value='CLAIM YOUR FREE TRIAL'
-      />
+      <button className={`${styles.submit} ${styles.input}`} type='submit'>
+        CLAIM YOUR FREE TRIAL
+      </button>
       <br />
 
       <p style={{ color: 'hsl(246, 25%, 77%)' }}>

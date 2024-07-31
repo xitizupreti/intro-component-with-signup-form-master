@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { Outfit } from 'next/font/google';
 import './globals.css';
+import Head from 'next/head';
 
 const inter = Outfit({ subsets: ['latin'] });
 
@@ -16,6 +17,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en'>
+      <Head>
+        <link rel='icon' type='image/jpg' href='/favicon.jpg' />
+      </Head>
       <body className={inter.className}>{children}</body>
     </html>
   );
