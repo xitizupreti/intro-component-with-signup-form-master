@@ -59,7 +59,6 @@ export default function Form() {
     backgroundImage: 'url(/images/icon-error.svg)',
     backgroundRepeat: 'no-repeat',
     backgroundPosition: '95% 50%',
-    color: 'red',
   };
 
   const normalStyles = {
@@ -67,7 +66,12 @@ export default function Form() {
     backgroundImage: 'none',
   };
   return (
-    <form className={styles.form} onSubmit={handleSubmit} name='myform'>
+    <form
+      className={styles.form}
+      onSubmit={handleSubmit}
+      name='myform'
+      autoComplete='off'
+    >
       <input
         value={data.fname}
         onChange={handleChange}
@@ -77,7 +81,7 @@ export default function Form() {
         name='fname'
         placeholder='First Name'
       />
-      <span style={{ color: 'black' }}>{fnameError}</span>
+      <span style={{ color: 'red' }}>{fnameError}</span>
       <br />
       <input
         value={data.lname}
@@ -88,7 +92,7 @@ export default function Form() {
         name='lname'
         placeholder='Last Name'
       />
-      {lnameError}
+      <span style={{ color: 'red' }}>{lnameError}</span>
       <br />
       <input
         value={data.mail}
@@ -100,7 +104,7 @@ export default function Form() {
         placeholder='Email Address'
         pattern='[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$'
       />
-      {mailError}
+      <span style={{ color: 'red' }}>{mailError}</span>
       <br />
       <input
         value={data.password}
@@ -111,7 +115,7 @@ export default function Form() {
         name='password'
         placeholder='Password'
       />
-      {passwordError}
+      <span style={{ color: 'red' }}>{passwordError}</span>
       <br />
       <button className={`${styles.submit} ${styles.input}`} type='submit'>
         CLAIM YOUR FREE TRIAL
