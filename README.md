@@ -16,6 +16,7 @@ This is a solution to the [Intro component with sign up form challenge on Fronte
 - [Acknowledgments](#acknowledgments)
 
 ## Overview
+
 Just a simple Sign UP form with the help of HTML5, CSS3 & JavaScript.
 
 ### The challenge
@@ -25,20 +26,21 @@ Users should be able to:
 - View the optimal layout for the site depending on their device's screen size
 - See hover states for all interactive elements on the page
 - Receive an error message when the `form` is submitted if:
-  - Any `input` field is empty. The message for this error should say *"[Field Name] cannot be empty"*
-  - The email address is not formatted correctly (i.e. a correct email address should have this structure: `name@host.tld`). The message for this error should say *"Looks like this is not an email"*
+  - Any `input` field is empty. The message for this error should say _"[Field Name] cannot be empty"_
+  - The email address is not formatted correctly (i.e. a correct email address should have this structure: `name@host.tld`). The message for this error should say _"Looks like this is not an email"_
 
 ### Screenshot
 
-![Mobile SS](./design/mobile-design.jpg)
-![Desktop SS](./design/desktop-design.jpg)
-![Active states](./design/active-states.jpg)
+![Mobile SS](./public/design/mobile-design.jpg)
+![Desktop SS](./public/design/desktop-design.jpg)
+![Active states](./public/design/active-states.jpg)
 
 ### Links
 
 - Live Site Solution URL: [https://xitizupreti.github.io/intro-component-with-signup-form-master/](https://xitizupreti.github.io/intro-component-with-signup-form-master/)
 
 ## My process
+
 As usual 1st HTML Model then added CSS properties and finally used JS.
 
 ### Built with
@@ -51,10 +53,10 @@ As usual 1st HTML Model then added CSS properties and finally used JS.
 
 ### Continued development
 
-```box-shadow: none|h-offset v-offset blur spread color |inset|initial|inherit;```<br><br>
-``` ::placeholder{} => To change placeholder color ```<br><br>
-``` as an advantage with filter:drop-shadow you can generate shadow around irregular shapes or images, whereas box-shadows generates a rectangular shadow. ```<br><br>
-```display:block/none (useful while toggle)```
+`box-shadow: none|h-offset v-offset blur spread color |inset|initial|inherit;`<br><br>
+`::placeholder{} => To change placeholder color`<br><br>
+`as an advantage with filter:drop-shadow you can generate shadow around irregular shapes or images, whereas box-shadows generates a rectangular shadow.`<br><br>
+`display:block/none (useful while toggle)`
 
 ### Useful resources
 
@@ -68,7 +70,6 @@ As usual 1st HTML Model then added CSS properties and finally used JS.
 
 - Website - [XiTiZ](https://www.kshitizupreti.com.np)
 
-
 ## Acknowledgments
 
-I am thankful to Google, Stack OverFlow & [Aashish.](https://github.com/aashish-cd)
+I am thankful to Google, Stack OverFlow & ChatGPT.
